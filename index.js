@@ -27,3 +27,13 @@ const buttonContainer = document.getElementById("button-container");
 buttonContainer.appendChild(clearBtn);
 buttonContainer.appendChild(resizeGridBtn);
 buttonContainer.appendChild(rainbowBtn);
+
+function changeBackground(e){
+    e.target.style.backgroundColor = "black";
+}
+
+const gridItems = document.querySelectorAll(".grid-item");
+
+gridItems.forEach(item => {
+    item.addEventListener("mouseover", changeBackground);
+})
